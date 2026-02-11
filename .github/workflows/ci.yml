@@ -26,3 +26,7 @@ jobs:
       - name: Type check
         run: npx tsc --noEmit
 
+      - name: Run coverage
+        run: npm run coverage
+
+
