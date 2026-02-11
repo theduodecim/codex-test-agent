@@ -34,7 +34,6 @@ export function isValidPassword(pw: string): boolean {
   return (
     pw.length >= 10 &&
     /[A-Z]/.test(pw) &&
-    /\d/.test(pw) &&
-    /[!@#$%^&*]/.test(pw)
+    /\d/.test(pw)
   );
 }
