@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { isValidPassword, normalizeUsername, safeDivide } from "../src/index";
+import { isValidPassword, normalizeUsername, safeDivide } from "../src/index.js";
 
 describe("safeDivide", () => {
   it("divide correctamente dos números positivos", () => {
