@@ -68,6 +68,14 @@ If coverage is enabled:
 ```bash
 npm run coverage
 ```
+## Usage Example
+
+```ts
+import { safeDivide, normalizeUsername, isValidPassword } from "codex-test-agent";
+
+safeDivide(10, 2); // 5
+normalizeUsername(" Juan Perez "); // "juan_perez"
+isValidPassword("SecurePass1!"); // true
 
 ---
 
