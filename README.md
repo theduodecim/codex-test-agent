@@ -184,4 +184,22 @@ Perfect for:
 
 ---
 
+---
+
+## 🤖 AI-Assisted Development
+
+This project was initialized using AI-assisted development (GitHub Copilot / Codex).
+
+AI was used to:
+
+- Generate initial TypeScript project structure
+- Configure Vitest testing environment
+- Create unit tests including edge cases
+- Configure GitHub Actions CI pipeline
+
+The repository demonstrates how AI can accelerate setup, testing, and CI automation while maintaining production-ready standards.
+
+---
+
+
 Built with ❤️ using TypeScript + GitHub Actions
