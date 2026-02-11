@@ -115,13 +115,24 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
 
       - name: Install dependencies
         run: npm install
 
       - name: Run tests
         run: npm test
+        
+      - name: Type check
+        run: npx tsc --noEmit
+
+      - name: Run coverage
+        run: npm run coverage
+        
+      - name: Upload coverage
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: coverage
 ```
 
 ---
