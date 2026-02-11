@@ -39,7 +39,7 @@ describe("normalizeUsername", () => {
 
 describe("isValidPassword", () => {
   it("retorna true para una contraseña válida", () => {
-    expect(isValidPassword("StrongPass1")).toBe(true);
+   expect(isValidPassword("StrongPass1!")).toBe(true);
   });
 
   it("retorna false si tiene menos de 10 caracteres (edge case límite 9)", () => {
@@ -47,7 +47,7 @@ describe("isValidPassword", () => {
   });
 
   it("retorna true exactamente en el mínimo de 10 caracteres", () => {
-    expect(isValidPassword("Abcdefghi1")).toBe(true);
+    expect(isValidPassword("Abcdefghi1!")).toBe(true);
   });
 
   it("retorna false si no contiene mayúsculas", () => {
