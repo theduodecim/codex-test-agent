@@ -96,12 +96,13 @@ Location:
 
 ### 📄 Example Configuration
 
-```yaml
 name: CI
 
 on:
   push:
+    branches: ["main"]
   pull_request:
+    branches: ["main"]
 
 jobs:
   test:
@@ -111,24 +112,21 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 20
 
       - name: Install dependencies
         run: npm install
 
-      - name: Run tests
-        run: npm test
-        
       - name: Type check
         run: npx tsc --noEmit
 
-      - name: Run coverage
+      - name: Run tests with coverage
         run: npm run coverage
-        
-      - name: Upload coverage
+
+      - name: Upload coverage HTML
         uses: actions/upload-artifact@v4
         with:
           name: coverage-report
